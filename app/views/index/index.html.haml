@@ -1,0 +1,9 @@
+%div.index-page
+  %div.container
+    = render partial: 'index/elements/project-info'
+    = render partial: 'index/elements/recent', object: @data[:recent]
+    %div.card-deck
+      - @data[:rounds].each do |round|
+        = render partial: 'index/round', object: round
+    %button.btn.btn-primary
+      %span= t('index.recent.title')

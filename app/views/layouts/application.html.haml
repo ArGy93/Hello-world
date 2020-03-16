@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"}
+
+    %title take.it
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+          crossorigin: "anonymous"}
+    %link{rel: "manifest", href: "manifest.json"}
+
+
+  %body
+    = render partial: 'shared/header'
+    %main
+      = yield
+    = render partial: 'shared/mobile-menu'
+    -# = render partial: 'shared/footer'
+    = render partial: 'shared/modals'

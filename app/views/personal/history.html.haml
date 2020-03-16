@@ -1,0 +1,14 @@
+%div.container
+  %div.row
+    %div.container.col-sm-10
+      = paginate @tickets, window: 2, theme: 'twitter-bootstrap-4'
+    %div.container.col-sm-2
+      = link_to(t('personal.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-secondary ml-auto col-sm-12')
+  %div.row
+    - @tickets.each do |ticket|
+      %div.col-sm-12
+        = render partial: "personal/history_item", locals:  { ticket: ticket }
+  %div.row
+    %div.container-fluid
+      = paginate @tickets, theme: 'twitter-bootstrap-4'
+

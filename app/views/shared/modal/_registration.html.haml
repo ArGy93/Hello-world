@@ -1,0 +1,54 @@
+%div.modal{ data: { target: 'registration' } }
+  %div.container
+    %div.modal__title
+      = t('static.title.name')
+    %button.modal__close{ :type => 'button' }
+      %span ×
+    %ul.modal__tabs
+      %li.modal__tabs-item{ data: { tab_head: 'registration' } }
+        %a.modal__tabs-link
+          = t('static.registration.tabs.registration')
+      %li.modal__tabs-item{ data: { tab_head: 'login' } }
+        %a.modal__tabs-link
+          = t('static.registration.tabs.authorisation')
+    = render partial: 'shared/modal/registration-tab'
+    = render partial: 'shared/modal/login-tab'
+
+
+      
+-# %div.myTabContent.tab-content
+  %div.registration-pane.tab-pane.fade.show.active{'aria-labelledby': 'reg-tab', role: 'tabpanel'}
+    %form#registrationForm.needs-validation{data: { remote: true }, action: '/users', method: 'POST' }
+      = hidden_field_tag :authenticity_token, form_authenticity_token
+      = hidden_field_tag :ref, params[:ref]
+      .form-group
+        %label{:for => 'mobileInput'}
+          = t('modals.registration.forms.registration.mobile')
+        %input#mobileInput.form-control{'aria-describedby': 'mobileHelp', placeholder: t('modals.registration.forms.registration.placeholder'),
+                                        name: 'user[mobile]',  type: 'text', required: true}/
+        %small#mobileHelp.form-text.text-muted
+          =t('modals.registration.forms.registration.help')
+      .form-group
+        .form-check
+          %input#rules.form-check-input.ml-0{'aria-describedby': 'rules',
+                                    name: 'user[rules]',  type: 'checkbox', required: true}
+          %label.form-check-label{:for => 'rules'}
+            = t('modals.registration.forms.registration.rules')
+      %button.btn.btn-primary{:type => 'submit'}
+        = t('modals.registration.forms.common.send')
+  %div.authorisation-pane.tab-pane.fade{'aria-labelledby': 'auth-tab', role: 'tabpanel'}
+    %form#authForm.needs-validation{data: { remote: true }, action: '/users/sign_in', method: 'POST' }
+      = hidden_field_tag :authenticity_token, form_authenticity_token
+      .form-group
+        %label{:for => 'mobileInputAuth'}
+          = t('modals.registration.forms.registration.mobile')
+        %input#mobileInputAuth.form-control{placeholder: t('modals.registration.forms.auth.placeholder'),
+                                        name: 'user[mobile]',  type: 'text', required: true}/
+      .form-group
+        %label{:for => 'passwordInputAuth'}
+          = t('modals.registration.forms.auth.password')
+        %input#passwordInputAuth.form-control{'aria-describedby': 'passwordHelpAuth', name: 'user[password]',  type: 'password', required: true}/
+        %small#passwordHelpAuth.form-text.text-muted
+          =t('modals.registration.forms.auth.recover')
+      %button.btn.btn-primary{:type => 'submit'}
+        = t('modals.registration.forms.common.send')

@@ -1,0 +1,6 @@
+- if current_user
+  %a.nav-link{href:'/personal'}
+    = t('static.personal.history')
+- else
+  %a.nav-link.registration-popover{ data: { toggle: 'modal', target: '#registrationForms'} }
+    = t('static.personal.registration')

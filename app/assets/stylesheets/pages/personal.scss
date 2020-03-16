@@ -1,0 +1,93 @@
+.personal {
+
+  &__title {
+    margin-bottom: 37px;
+    text-align: center;
+    line-height: 1.11;
+    font-size: 36px;
+    font-weight: bold;
+    color: $color-black;
+  }
+
+  &__buy {
+    display: flex;
+    padding: 0 10px 30px;
+
+    &-img {
+      box-sizing: border-box;
+      width: 30%;
+      padding-right: 10%;
+    }
+
+    &.lose,
+    &.win {
+      padding: 24px 20px 30px;
+      border-top: 1px solid $color-black;
+
+      .personal__buy-img {
+        order: 2;
+          padding-right: 0;
+      }
+    }
+  }
+
+  &__row {
+    margin: 0 -20px;
+  }
+
+  &__message {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    color: $color-black;
+
+    &-lose {
+      opacity: 0.5;
+      margin-top: 0;
+      padding: 15px 0 20px;
+      text-align: center;
+      font-style: normal;
+      background-color: $color-mid-grey;
+    }
+
+    &-win {
+      margin-top: 0;
+      font-style: normal;
+      color: $color-white;
+    }
+  }
+
+  &__win {
+    text-align: center;
+    padding: 12px 0 23px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-image: linear-gradient(122deg, #1189fb, #8632e1);
+
+    &-ticket {
+      margin: 8px 12px;
+      font-size: 14px;
+      color: $color-white;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .content__link {
+      opacity: 0.5;
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom: 1px solid $color-white;
+      color: $color-white;
+    }
+  }
+
+  .btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,33 @@
+%div.personal__buy
+  %div.personal__buy-img
+    %img.card-img-top.round-photo.mx-sm-auto{ src: prize.image.url }
+  %div.content
+    %div.content__active Активный розыгрыш
+    %div.content__title
+      = prize.name
+    %div.content__buy Вы купили
+    %div.content__count
+      %span.content__count-buy
+        = "#{prize.tickets.count} билетов"
+      %span.content__count-all
+        = "из #{prize.tickets_amount}"
+    %div.content__tickets
+      %div.content__tickets-counter
+        %span.count 1
+        %span.identifier AJF451KL6GHW895A64S6
+      %div.content__tickets-counter
+        %span.count 2
+        %span.identifier AJF451KL6GHW895A64S6
+      %div.content__tickets-counter
+        %span.count 3
+        %span.identifier AJF451KL6GHW895A64S6
+    %button.content__link.js-btn{ data: { call: 'tickets-count' } }
+      = t('personal.tickets-all')
+%div.round__tickets.is-personal
+  %p.round__tickets-text
+    = t('index.round.buy_tickets_again')
+  %div.round__tickets-buy
+    - [1, 5, 10, 20, 50].each do |amount|
+      = render partial: 'index/elements/buy-button', locals: { round_id: prize.id, amount: amount, price: prize.decorate.ticket_price * amount }
+  %p.round__tickets-availability
+    = t('personal.availability')

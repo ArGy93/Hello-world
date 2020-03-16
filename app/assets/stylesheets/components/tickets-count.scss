@@ -1,0 +1,39 @@
+.tickets-count {
+
+  &__title {
+    max-width: 300px;
+    margin: 60px auto 25px;
+    text-align: center;
+    line-height: 1.33;
+    font-size: 18px;
+    font-style: italic;
+    color: $color-white;
+  }
+
+  &__item {
+    display: flex;
+
+    span {
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1.33;
+      font-size: 12px;
+      color: $color-white;
+    }
+
+    &-number {
+      width: 30px;
+
+      span {
+        opacity: 0.5;
+      }
+    }
+
+    &-identifier {
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

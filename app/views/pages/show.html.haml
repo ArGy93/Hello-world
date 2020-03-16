@@ -1,0 +1,6 @@
+%div.container
+  %div.row
+    %h3
+      = @page.try(:title)
+  %div.row
+    = @page.text.try(:html_safe)

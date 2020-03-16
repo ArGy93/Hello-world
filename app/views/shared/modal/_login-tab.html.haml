@@ -1,0 +1,15 @@
+%div.modal__content{ data: { tab_body: 'login' }, :style => 'display: none;' }
+  %label{ :for => 'reg-number' }
+    = t('modals.registration.forms.registration.mobile')
+  %input{ :id => 'reg-number',
+          :type => 'tel',
+          :placeholder => t('modals.registration.forms.registration.placeholder') }
+  %label{ :for => 'sms' }
+    = t('modals.registration.forms.auth.password')
+  %input{ :id => 'sms',
+          :type => 'text',
+          :placeholder => t('modals.registration.forms.auth.placeholder') }
+  %p.modal__message-help
+    = t('modals.registration.forms.auth.recover')
+  %button.btn.btn-primary.btn-modal.js-btn
+    %span= t('modals.registration.forms.auth.login')

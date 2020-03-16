@@ -1,0 +1,9 @@
+%div.recent-page
+  %h1.recent__title
+    = t('static.menu.recent')
+  %div.container
+    - @rounds.each do |round|
+      = render partial: "index/elements/recent", object: round
+  %div.container
+    %a.btn.btn-primary
+      %span= t('rounds.history.btn-label')

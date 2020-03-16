@@ -1,0 +1,6 @@
+%div.progress-bar
+  %p.progress-bar__label
+    = t('index.round.progress', sold: sold, amount: amount)
+  %div.col-sm-12.bg-dark
+    %div.progress-bar__track{style: "width:#{sold.to_f/amount*100}%"}
+    %div.progress-bar__bg

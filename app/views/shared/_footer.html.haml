@@ -1,0 +1,20 @@
+%nav.navbar.fixed-bottom.navbar-light.navbar-expand-lg.bg-light.bg-dark.footer
+  %button.navbar-toggler{ type: 'button', data: { toggle: 'collapse', target: '#bottomNav'}, aria: { controls: 'bottomNav', expanded: 'false', label: 'Toggle navigation' } }
+    %span.navbar-toggler-icon
+  %div#bottomNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item
+        %a.nav-link{href: '/pages/about'}
+          = t('static.footer.navigation.about')
+      %li.nav-item
+        %a.nav-link{href: '/pages/faq'}
+          = t('static.footer.navigation.faq')
+      %li.nav-item
+        %a.nav-link{href: '/pages/offerta'}
+          = t('static.footer.navigation.offerta')
+      %li.nav-item
+        %a.nav-link{href: '/pages/partner'}
+          = t('static.footer.navigation.partner')
+    = render partial: 'shared/social'
+  %span.navbar-text
+    = t('static.footer.navigation.sience')

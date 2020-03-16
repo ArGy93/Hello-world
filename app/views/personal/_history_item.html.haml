@@ -1,0 +1,21 @@
+%div.card.mb-sm-3.mb-md-2
+  %div.card-header{ data: { toggle: 'collapse', target: "#historyItem#{ticket.id}"},
+                  aria: { controls: "historyItem#{ticket.id}", expanded: 'false', label: 'Open info' },
+                  class: ticket.winner? ? 'text-success' : 'text-danger' }
+    %span.mr-auto
+      = t('rounds.history.tickets', id: ticket)
+    %span.dropdown-toggle
+  %div.card-body.collapse{id: "historyItem#{ticket.id}"}
+    %div.row
+      %div.col-sm-12.col-md-2
+        %img{src: ticket.round.image.thumb.url}
+      %div.col-sm-12.col-md-10
+        %h2.card-title
+          = ticket.round.name
+        %p.card-text
+          = t('rounds.history.header', id: ticket.round.id)
+        %p.card-text
+          = ticket.round.description.html_safe
+  %div.card-footer
+    %h6.card-title
+      = t('rounds.history.winner', id: ticket.round.win_ticket)

@@ -1,0 +1,17 @@
+%div.modal__content{ data: { tab_body: 'registration' }, :style => 'display: none;' }
+  %label{ :for => 'reg-number' }
+    = t('modals.registration.forms.registration.mobile')
+  %input{ :id => 'reg-number',
+          :type => 'tel',
+          :placeholder => t('modals.registration.forms.registration.placeholder') }
+  %p.modal__message-help
+    = t('modals.registration.forms.registration.help')
+  %div.modal__content-confirm
+    %input{ :type => 'checkbox', :id => 'confirm-condition' }
+    %label{ :for => 'confirm-condition' }
+    %p.modal__message-confirm
+      = t('modals.registration.forms.registration.rules')
+      %a{ :href => '#' }
+        = t('modals.registration.forms.registration.rules_link')
+  %button.btn.btn-primary.btn-modal.js-btn
+    %span= t('modals.registration.forms.common.send')

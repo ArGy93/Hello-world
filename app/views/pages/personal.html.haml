@@ -1,0 +1,20 @@
+%div.personal
+  %p.personal__message У вас ещё нет билетов.
+  %p.personal__message
+    Выбирите розыгрыш
+    %br
+    и купите на него билетов.
+  = render partial: 'shared/payment-info'
+  %h1.personal__title
+    = t('static.tickets.name')
+  %div.container
+    - @data[:rounds].each do |round|
+      - if round.id == 2
+        = render partial: 'pages/prize', object: round
+  %div.container
+    - @rounds.each do |round|
+      - if round.id == 5 || round.id == 6
+        = render partial: "pages/past", object: round
+  %div.container
+    %button.btn.btn-primary
+      %span= t('rounds.history.btn-label')

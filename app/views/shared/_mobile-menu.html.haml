@@ -1,0 +1,15 @@
+%div.modal.modal__menu
+  %div.container
+    %div.modal__title
+      = t('static.title.name')
+    = render partial: 'shared/mobile-nav'
+    - if !current_user
+      %button.btn.btn-primary.btn-modal.js-btn{ data: {call: 'registration'} }
+        %span= t('static.personal.registration')
+    = render partial: 'shared/social'
+    %button.modal__close{ :type => 'button' }
+      %span{aria: { hidden: "true" }} ×
+
+
+-# Пример дата атрибутов кнопки
+-# %button.btn.btn-primary.btn-modal{ data: { toggle: 'modal', target: '#registrationForms'} }

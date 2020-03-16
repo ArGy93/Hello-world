@@ -1,0 +1,30 @@
+%div.round(class="is-#{round.card_type}")
+  %div.round__info
+    %div.round__info-content
+      %h4.round__title
+        = round.name
+      = render partial: 'index/elements/progress-bar', locals: { sold: round.tickets.count, amount: round.tickets_amount }
+      %button.btn
+        %span= t('index.round.ticket_price')
+    %div.round__info-img
+      %img.card-img-top.round-photo.mx-sm-auto{ src: round.image.url }
+  %div.round__tickets
+    %p.round__tickets-text
+      = t('index.round.buy_tickets')
+    %div.round__tickets-buy
+      - [1, 5, 10, 20, 50].each do |amount|
+        = render partial: 'index/elements/buy-button', locals: { round_id: round.id, amount: amount, price: round.decorate.ticket_price * amount }
+    %p.round__tickets-time
+      = t('index.round.tickets', time: l(Time.now+1.day, format: :short))
+
+  -# %div.card-body
+  -#   %div.card-text.item-info
+  -#     = render partial: 'index/elements/progress_bar', locals: { sold: round.tickets.count, amount: round.tickets_amount }
+  -# %div.card-body.bottom-panel
+  -#   %div.row
+  -#     %p
+  -#       = t('index.round.buy_tickets')
+  -#     - [1, 5, 10, 20, 50].each do |amount|
+  -#       = render partial: 'index/elements/buy_button', locals: { round_id: round.id, amount: amount, price: round.decorate.ticket_price * amount }
+  -#     %p
+  -#       = t('index.round.tickets', time: l(Time.now+1.day, format: :short))

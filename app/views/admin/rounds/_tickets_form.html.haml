@@ -1,0 +1,4 @@
+= semantic_form_for [:admin, Ticket.new], url: admin_round_cheats_add_tickets_path(round_id: params[:round_id]), builder: ActiveAdmin::FormBuilder do |f|
+  = f.inputs do
+    = f.input :user, collection: User.all
+  = f.actions

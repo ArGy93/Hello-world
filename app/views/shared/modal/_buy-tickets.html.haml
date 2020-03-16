@@ -1,0 +1,31 @@
+%div.modal.buy-tickets{ data: { target: 'buy-tickets' } }
+  %div.container
+    %div.modal__title.buy-tickets__title
+      = t('static.title.name')
+    %button.modal__close.buy-tickets__close{ :type => 'button' }
+      %span ×
+  %div.product
+    %div.container
+      %span.product__count 10 билетов
+      %span.product__text на розыгрыш
+      %div.product__content
+        %div.product__content-img
+          %img
+        %div.info
+          %p.info__title iPhone XS Max 128 GB
+          %p.info__time Приблизительное время розыгрыша: 11 июня, 10:00
+      %span.product__price 1200 ₽
+  %div.container
+    %button.btn.btn-primary.js-btn{ data: { call: 'loading-payment' } }
+      %span
+        купить по
+        %i.fa.fa-credit-card.fa-lg
+        карте
+    %span.buy-tickets__message-help
+      = t('modals.registration.forms.buy-ticket.help')
+
+
+
+
+-# Для вывода переменной, но нужно эту переменную сюда передать
+-# = "#{price}"

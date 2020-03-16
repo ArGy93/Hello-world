@@ -1,0 +1,20 @@
+@include reset();
+
+body {
+  position: relative;
+  font-family: 'PTRootUI', sans-serif;
+}
+
+button:active, button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}

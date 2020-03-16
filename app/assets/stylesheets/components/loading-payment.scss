@@ -1,0 +1,23 @@
+.loading-payment {
+
+  &__text {
+    margin:  140px 0 34px;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 28px;
+    font-style: italic;
+    color: $color-white;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 72px;
+    height: 72px;
+    border: 2px solid $color-white;
+    border-radius: 100%;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  round: 
+  user: one
+  amount: one
+  transaction_id: MyString
+  aasm_state: MyString
+
+two:
+  round: 
+  user: two
+  amount: two
+  transaction_id: MyString
+  aasm_state: MyString

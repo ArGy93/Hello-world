@@ -1,0 +1,98 @@
+ru:
+  static:
+    title:
+      name: 'Take.it'
+    menu:
+      main: 'Главная'
+      recent: 'Завершенные розыгрыши'
+      about: 'О проекте'
+      info: 'Вопросы и ответы'
+      contract: 'Договор'
+      partners: 'Партнёрская программа'
+      news: 'Новости'
+    personal:
+      history: 'Мои билеты'
+      registration: 'Регистрация и вход'
+    tickets:
+      name: 'Мои билеты'
+    registration:
+      tabs:
+        registration: 'Регистрация'
+        authorisation: 'Вход'
+    header:
+      login: 'Вход'
+    footer:
+      navigation:
+        about: 'О проекте'
+        faq: 'Вопросы и ответы'
+        offerta: 'Договор'
+        partner: 'Партнерская программа'
+        sience: '© 2017 - 2019'
+  time:
+   formats:
+     long: "%Y-%m-%d %H:%M:%S"
+     date: "%d %B %y"
+     timestamp: '%d %b, %H:%M'
+  admin:
+    notice:
+      started: 'Раунд запущен'
+      completed: 'Раунд завершен'
+    buttons:
+      start: 'Запустить'
+      stop: 'Завершить'
+      additional: 'Дополнительная информация'
+    messages:
+      start: 'Действительно запустить этот раунд?'
+      stop: 'Завершить'
+    cheats:
+      tickets: 'Создать билеты'
+      compute: 'Разыграть возможные'
+  index:
+    recent:
+      header: '%{title} отправляется обладателю билета '
+      timestamp: 'Розыгрыш состоялся %{stamp}'
+      title: 'Проведённые розыгрыши'
+    round:
+      tickets: 'Приблизительное время розыгрыша: %{time}'
+      ticket_price: '120 ₽ за один билет'
+      price: 'Цена билета:'
+      money: ' %{price}р'
+      buy: 'Купить'
+      sold: 'Билетов нет'
+      buy_tickets: 'Купить билетов:'
+      buy_tickets_again: 'Докупить билетов:'
+      progress: 'Куплено %{sold} из %{amount}'
+  rounds:
+    history:
+      header: 'Розыгрыш #%{id}'
+      winner: 'Выигрышный билет: %{id}'
+      tickets: 'Билет: %{id}'
+      btn-label: 'Что сейчас разыгрывается'
+  modals:
+    registration:
+      forms:
+        registration:
+          mobile: 'Номер телефона'
+          placeholder: 'Формат: +79991111111'
+          help: 'Отправим смс с паролем на указанный номер'
+          rules: 'принимаю'
+          rules_link: 'условия соглашения'
+        auth:
+          mobile: 'Номер телефона'
+          placeholder: '000000'
+          password: 'Пароль из смс'
+          login: 'Войти'
+          recover: 'Если вы забыли пароль просто зарегистрируйте номер еще раз. Вы получите СМС с новым паролем.'
+        buy-ticket:
+          help: 'Вы перейдёте на страницу оплаты'
+        common:
+          send: 'Отправить'
+          validation: 'Формат телефона: +79991111111'
+  personal:
+    lose: 'Увы, вы не выиграли'
+    availability: 'Осталось всего 155 билетов'
+    tickets: 'Посмотреть номера билетов'
+    tickets-all: 'Посмотреть номера всех билетов'
+    logout: 'Выйти'
+  sms:
+    winner: 'Поздравляем! Вы участвовали в розыгрыше не зря! С вами свяжется наш оператор. %{host}'

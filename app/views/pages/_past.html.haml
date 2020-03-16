@@ -1,0 +1,26 @@
+%div.personal__row
+  %div.personal__buy.lose
+    %div.personal__buy-img
+      %img.card-img-top.round-photo.mx-sm-auto{ src: past.image.url }
+    %div.content
+      %div.content__active Розыгрыш 15 мая
+      %div.content__title
+        = past.name
+      %div.content__buy Вы купили
+      %div.content__count
+        %span.content__count-buy
+          = "#{past.tickets.count} билетов"
+        %span.content__count-all
+          = "из #{past.tickets_amount}"
+      %button.content__link
+        = t('personal.tickets')
+  - if past.id == 6
+    %p.personal__message-lose
+      = t('personal.lose')
+  - else
+    %div.personal__win
+      %p.personal__message-win Поздравляем!
+      %p.personal__win-ticket
+        Выиграл ваш билет
+        %span SJE56F678NEF189JE569
+      %button.content__link Как мне получить выигрыш?

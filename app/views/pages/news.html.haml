@@ -1,0 +1,4 @@
+- @pages.each do |page|
+  = render partial: 'pages/news', object: page
+
+= paginate @pages, theme: 'twitter-bootstrap-4'

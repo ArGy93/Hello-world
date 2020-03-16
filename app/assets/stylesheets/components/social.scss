@@ -1,0 +1,18 @@
+.social {
+  margin-top: 50px;
+  margin-bottom: 23px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &-item {
+      margin: 0 17px;
+
+      a {
+        display: block;
+        color: $color-white;
+      }
+    }
+  }
+}

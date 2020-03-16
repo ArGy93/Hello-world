@@ -1,0 +1,11 @@
+%a.recent{href: recent_path}
+  .container
+    .recent__content
+      %p.recent__content-text
+        = t('index.recent.header', title: recent.name)
+        %b
+          = recent.win_ticket
+      %p.recent__content-date
+        = t('index.recent.timestamp', stamp: l(recent.updated_at, format: :timestamp))
+    .recent__img
+      %img{ src: recent.image.url }

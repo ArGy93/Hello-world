@@ -1,0 +1,9 @@
+%div.card.mb-sm-1
+  %a.card-link.news-href{href: "/pages/#{news.slug}"}
+    %div.card-header
+      %h4.card-title
+        = news.title
+    %div.card-body
+      = sanitize news.preview
+    %div.card-footer
+      = l(news.created_at, format: t('time.formats.date'))

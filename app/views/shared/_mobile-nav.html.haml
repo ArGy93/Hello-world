@@ -1,0 +1,31 @@
+%nav.mobile-nav
+  %ul.mobile-nav__list
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/'}
+        = t('static.menu.main')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href:'/personal'}
+        = t('static.personal.history')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/recent'}
+        = t('static.menu.recent')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/'}
+        = t('static.menu.about')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/answers'}
+        = t('static.menu.info')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/'}
+        = t('static.menu.contract')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/'}
+        = t('static.menu.partners')
+    %li.mobile-nav__list-item
+      %a.mobile-nav__list-link{href: '/'}
+        = t('static.menu.news')
+    - if current_user
+      %li.mobile-nav__list-item
+        %a.mobile-nav__list-link
+          %i.fa.fa-sign-out.fa-lg.logout-icon
+          = t('personal.logout')

@@ -1,0 +1,98 @@
+.buy-tickets {
+  background-color: $color-white;
+
+  &__title {
+    margin-bottom: 52px;
+    color: $color-black;
+  }
+
+  &__close {
+
+    span {
+      color: $color-black;
+    }
+  }
+
+  &__message {
+
+    &-help {
+      display: block;
+      margin: 14px auto;
+      opacity: 0.5;
+      color: $color-black;
+    }
+  }
+
+  .container {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .product {
+    margin-bottom: 40px;
+    padding-top: 22px;
+    background-color: $color-mid-grey;
+
+    &__count {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      color: $color-black;
+    }
+
+    &__text {
+      margin-bottom: 37px;
+      text-align: center;
+      font-size: 18px;
+      font-style: italic;
+      color: $color-black-opacity;
+    }
+
+    &__content {
+      display: flex;
+      padding: 11px 14px 18px;
+      border-top: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
+
+      &-img {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        width: 30%;
+        padding-right: 30px;
+      }
+    }
+
+    &__price {
+      display: block;
+      margin-top: 31px;
+      margin-bottom: 21px;
+      text-align: center;
+      font-size: 48px;
+      opacity: 0.2;
+      color: $color-black;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+
+      &__title {
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-black;
+      }
+
+      &__time {
+        margin-top: 35px;
+        font-size: 12px;
+        color: $color-black;
+      }
+    }
+
+    .container {
+      padding-top: 0;
+    }
+  }
+}
